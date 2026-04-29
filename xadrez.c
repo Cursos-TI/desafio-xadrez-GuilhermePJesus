@@ -11,12 +11,15 @@ int main() {
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     while (bispo <= 5) {
-        printf("Cima, Direita");
+        printf("Cima, Direita.\n");
     }
     
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
+    for (i = 1; i <= 5; i++) {
+        printf("Direita.\n");
+    }
+    
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
