@@ -13,13 +13,21 @@ void moverTorre(int torre){
 void moverBispo(int bispo){
     if (bispo > 0){
         printf("Cima, Direita.\n");
+        moverBispo(bispo - 1);
+    }
+}
+
+void moverRainha(int rainha){
+    if (rainha > 0){
+        printf("Esquerda.\n");
+        moverRainha(rainha - 1);
     }
 }
 
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-    int i, j, torre, bispo = 5, rainha = 8;
+    int i, j, torre = 5, bispo = 5, rainha = 8;
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     printf("\n=== BISPO ===\n");
@@ -33,10 +41,7 @@ int main() {
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
     printf("\n=== RAINHA ===\n");
-    do {
-        printf("Esquerda.\n");
-        rainha++;
-    } while (rainha <= 8);
+    moverRainha(rainha);
     
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
